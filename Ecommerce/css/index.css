@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Con este font-size 1 rem = 10px */
+    font-size: 62.5%;
+}
+
+body {
+    /* 
+        font-size base sera de 16px OJO: los rem no son relativos a esta medida, sino a la de la etiqueta html,
+        si no especificamos el font-size de un elemento, este tomara 16px por defecto.
+    */
+    font-size: 1.6rem; 
+    line-height: 2;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Hack que obliga a la imagen a no desbordarse de su contenedor */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilidades */
+.text-center {
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Header */
+.nombre-sitio {
+    margin: 5rem 0;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.nombre-sitio span {
+    color: #037bc0; 
+}
+
+/* Menu de navegación principal */
+.contenedor-navegacion {
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;   
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+}
+
+.hero {
+    background-image: url("https://i.pinimg.com/originals/25/aa/99/25aa990a00c6fc659f7548d644c1e7ed.png");
+    height: 55rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Categorias */
+.categorias h2{
+    /* font-family: 'Raleway', sans-serif; */
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 3rem;
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.categoria-item a {
+    text-align: center;
+    display: block;
+    font-size: 1.7rem;
+    padding: 2rem 0;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.categoria-item a:hover {
+    background-color: #037bc0;
+    color: #fff;
+    border-bottom-right-radius: 1.5rem;
+}
+
+/* Bloque nosotros */
+.sobre-nosotros {
+    /* Con este gradiente podemos simular que partimos un div a la mitad */
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%  ), url('../assets/nosotros.jpg');
+    padding: 10rem 0;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 100%, 100rem;
+    margin: 5rem 0;
+}
+
+.sobre-nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 8rem; 
+}
+
+.texto-sobre-nosotros h2 {
+    font-size: 4rem;
+}
+
+.texto-sobre-nosotros {
+    /* 
+        Con grid-column decimos desde que grid line queremos que empiece un elemento,
+        como el elemento esta dividido en 2 partes se tienen 3 lineas, principio, medio y final.    
+    */
+    grid-column: 2 / 3;
+    color: white;
+}
+
+/* Listado de productos */
+.contenido-principal h2 {
+    font-size: 4rem;
+}
+.contenido-principal {
+    padding-top: 5rem;
+}
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+.producto:nth-child(1) {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2) {
+    grid-column: 1 / 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+    object-fit: cover;
+    height: 30rem;
+    width: 100%;
+}
+.producto:nth-child(3) {
+    grid-column: 4 / 7;
+}
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.producto {
+    background-color: #037bc0;
+}
+.texto-producto {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+.texto-producto h3 {
+    font-size: 3rem;
+    margin: 0;
+}
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+.texto-producto a {
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all 150ms ease;
+}
+.texto-producto a:hover {
+    background-color: #769c02;
+}
+.precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/* footer */
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    font-size: 3rem;
+}
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+}
+.grid-footer a {
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 170ms ease;
+}
+.grid-footer a:hover {
+    text-decoration: underline;
+    color: #037bc0;
+}
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Pagina nosotros */
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    column-gap: 4rem;
+}
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+
+/* Pagina Blog */
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.contenedor-blog aside h3 {
+    font-size: 3rem;
+}
+.contenedor-blog aside ul {
+    padding-left: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.entrada {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 1rem 0;
+}
+.entrada-meta span {
+    color: #037bc0;
+}
+/* Toma el ultimo elemento que tenga la clase .entrada, en este caso es el ultimo elemento de la lista */
+.entrada:last-of-type {
+    border-bottom: none;
+}
+.entrada-blog {
+    font-family: 'Raleway', sans-serif;
+    text-align: justify;
+}
+.entrada-blog p {
+    margin: 1rem 0;
+}
+.entrada a {
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all 150ms ease;
+    width: 50%;
+    text-align: center;
+}
+.entrada a:hover {
+    background-color: #769c02;
+}
+
+/* Entrada de blog individual */
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/* Galeria */
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr)); */
+    gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+.galeria li {
+    overflow: hidden;
+    height: 40rem;
+    width: 40rem;
+}
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 200ms ease-out;
+}
+.galeria img:hover {
+    transform: scale(1.2);
+}
+
+.formulario {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    border-color: black;
+    border-width: 1px;
+    
+}
+
+.formulario legend {
+    background-color: #005485;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 4rem auto 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.formulario input[type="submit"] {
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all 150ms ease;
+    text-align: center;
+    border: none;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.formulario input[type="submit"]:hover {
+    background-color: #769c02;
+}
+
+.campo {
+    width: 100%;
+    display: flex;
+    margin-bottom: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.campo label {
+    flex-basis: 10rem; 
+}
+.campo input:not([type="radio"]), 
+.campo textarea,
+.campo select {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    background-color: #e1e1e1;
+}

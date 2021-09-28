@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('./notes\ app\ background.PNG');
+}
+.app-logo {
+    color: white;
+    font-size: 90px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 4px 6px black;
+}
+.app-logo i {
+    margin: 20px;
+}
+.form-login {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    width: 400px;
+    height: 450px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 1px 6px 12px rgba(0,0,0,0.5);
+}
+.form-login::after {
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: -60px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    z-index: 10;
+}
+.form-login img {
+    z-index: 20;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    width: 50px;
+}
+.form-login label {
+    display: block;
+}
+.form-fields {
+    margin-top: 60px;
+}
+.username-field {
+    display: flex;
+    background-color: rgba(235, 235, 235, 1);
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+.username-field i {
+    color: gray;
+}
+.password-field {
+    display: flex;
+    background-color: rgba(235, 235, 235, 1);
+    border-radius: 8px;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+.password-field i {
+    color: gray;
+}
+.form-login input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(235, 235, 235, 1);
+    outline: none;
+}
+button {
+    display: block;
+    width: 120px;
+    background-color: forestgreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+    opacity: 80%;
+}
+a {
+    margin-top: 40px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    color: gray
+}

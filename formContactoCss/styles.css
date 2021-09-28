@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background: rgb(195,34,182);
+    background: linear-gradient(0deg, rgba(195,34,182,1) 0%, rgba(253,187,45,1) 100%);
+    height: 100vh;
+}
+.background-banner{
+    background-color: white;
+    text-align: center;
+    height: 300px;
+    padding: 20px;
+    z-index: 0;
+    position: relative;
+}
+.background-banner h2{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #666;
+}
+.background-banner p{
+    width: 50%;
+    margin: 20px auto;
+    color: #666;
+}
+form{
+    position: absolute;
+    background-color: white;
+    height: 500px;
+    width: 50%;
+    box-shadow: 2px 2px 7px grey;
+    z-index: 1;
+    top: 150px;
+    border-radius: 18px;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    padding: 10px;
+
+}
+form label{
+    display: block;
+    margin-bottom: 5px;
+    color: #888;
+    font-size: 18px;
+}
+form input, textarea{
+    appearance: none;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #F3F3F3;
+    resize: none;
+    padding: 10px;
+    font-size: inherit;
+    color: black;
+}
+.grid-inputs {
+    width: 100%;
+    background-color: red;
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    justify-items: center;
+}
+

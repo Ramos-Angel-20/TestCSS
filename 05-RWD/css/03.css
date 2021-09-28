@@ -1,0 +1,24 @@
+.oferta {
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+    max-width: 60rem;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.precio {
+    font-size: 4rem;
+    margin: 0;
+}
+/*
+    NOTA IMPORTANTE: 
+    EN DESKTOP-FIRST, SI TRABAJAMOS CON MULTIPLES MEDIAQUERIES 
+    TENEMOS QUE IR PONIENDO DEL MAS GRANDE AL MAS CHICO, PORQUE
+    CSS FUNCIONA EN CASCADA.
+    EN MOBILE-FIRST ESTO ES AL REVEZ, DEL MAS CHICO AL MAS GRANDE.
+*/
+@media screen and (max-width: 600px) {
+    .oferta {
+        max-width: 100%;
+    }
+}

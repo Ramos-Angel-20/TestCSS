@@ -1,0 +1,19 @@
+/* ============== Mediaqueries entre dos tamaños ============== */
+.oferta {
+    background-color: #00446e;
+    padding: 2rem;
+    text-align: center;
+}
+.precio {
+    font-size: 6rem;
+    margin: 0;
+}
+/*
+    De esta forma tenemos un mediaquery etre dos medidas, de 600px a 800px.
+    Si ocuparamos una tercer medida, en lugar de usar and usarioamos una coma " , " .
+*/
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .oferta {
+        background-color: yellow;
+    }
+}

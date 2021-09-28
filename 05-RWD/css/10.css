@@ -1,0 +1,5 @@
+img {
+    max-width: 100%;
+    /* El 'display: block' elimina un pequeño margin que tienen todas las imagenes */
+    display: block; 
+}

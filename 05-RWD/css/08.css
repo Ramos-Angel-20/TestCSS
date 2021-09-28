@@ -1,0 +1,10 @@
+/* =========== 3 Columnas responsive con flexbox =========== */
+@media screen and (min-width: 768px) {
+    .tres-columnas-flex {
+        display: flex;
+        gap: 1rem;
+    }
+    .columna {
+        flex-grow: 1;
+    }
+}
